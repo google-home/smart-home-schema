@@ -1,0 +1,445 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "examples": [
+    {
+      "$comment": "Sensor device that reports descriptive state value.",
+      "currentSensorStateData": [
+        {
+          "name": "AirQuality",
+          "currentSensorState": "healthy"
+        }
+      ]
+    },
+    {
+      "$comment": "Sensor device that reports numeric state value.",
+      "currentSensorStateData": [
+        {
+          "name": "CarbonMonoxideLevel",
+          "rawValue": 200.0
+        }
+      ]
+    },
+    {
+      "$comment": "Sensor device that reports descriptive and numeric state value.",
+      "currentSensorStateData": [
+        {
+          "name": "SmokeLevel",
+          "currentSensorState": "smoke detected",
+          "rawValue": 200.0
+        }
+      ]
+    }
+  ],
+  "type": "object",
+  "properties": {
+    "currentSensorStateData": {
+      "description": "Current sensor state.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "oneOf": [
+          {
+            "description": "Current air quality.",
+            "type": "object",
+            "anyOf": [
+              {
+                "description": "Using sensor state name.",
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "description": "Sensor state name.",
+                    "type": "string",
+                    "enum": [
+                      "AirQuality"
+                    ]
+                  },
+                  "currentSensorState": {
+                    "description": "Current state.",
+                    "type": "string",
+                    "enum": [
+                      "healthy",
+                      "moderate",
+                      "unhealthy",
+                      "unhealthy for sensitive groups",
+                      "very unhealthy",
+                      "hazardous",
+                      "good",
+                      "fair",
+                      "poor",
+                      "very poor",
+                      "severe",
+                      "unknown"
+                    ]
+                  }
+                },
+                "required": [
+                  "name",
+                  "currentSensorState"
+                ]
+              },
+              {
+                "description": "Using raw value.",
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "description": "Sensor state name.",
+                    "type": "string",
+                    "enum": [
+                      "AirQuality"
+                    ]
+                  },
+                  "rawValue": {
+                    "description": "Current raw value.",
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 500
+                  }
+                },
+                "required": [
+                  "name",
+                  "rawValue"
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Current carbon monoxide level.",
+            "type": "object",
+            "anyOf": [
+              {
+                "description": "Using sensor state name.",
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "description": "Sensor state name.",
+                    "type": "string",
+                    "enum": [
+                      "CarbonMonoxideLevel"
+                    ]
+                  },
+                  "currentSensorState": {
+                    "description": "Current state.",
+                    "type": "string",
+                    "enum": [
+                      "carbon monoxide detected",
+                      "high",
+                      "no carbon monoxide detected",
+                      "unknown"
+                    ]
+                  }
+                },
+                "required": [
+                  "name",
+                  "currentSensorState"
+                ]
+              },
+              {
+                "description": "Using raw value.",
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "description": "Sensor state name.",
+                    "type": "string",
+                    "enum": [
+                      "CarbonMonoxideLevel"
+                    ]
+                  },
+                  "rawValue": {
+                    "description": "Current raw value.",
+                    "type": "number"
+                  }
+                },
+                "required": [
+                  "name",
+                  "rawValue"
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Current smoke level.",
+            "type": "object",
+            "anyOf": [
+              {
+                "description": "Using sensor state name.",
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "description": "Sensor state name.",
+                    "type": "string",
+                    "enum": [
+                      "SmokeLevel"
+                    ]
+                  },
+                  "currentSensorState": {
+                    "description": "Current state.",
+                    "type": "string",
+                    "enum": [
+                      "smoke detected",
+                      "high",
+                      "no smoke detected",
+                      "unknown"
+                    ]
+                  }
+                },
+                "required": [
+                  "name",
+                  "currentSensorState"
+                ]
+              },
+              {
+                "description": "Using raw value.",
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "description": "Sensor state name.",
+                    "type": "string",
+                    "enum": [
+                      "SmokeLevel"
+                    ]
+                  },
+                  "rawValue": {
+                    "description": "Current raw value.",
+                    "type": "number"
+                  }
+                },
+                "required": [
+                  "name",
+                  "rawValue"
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Current filter cleanliness.",
+            "type": "object",
+            "properties": {
+              "name": {
+                "description": "Sensor state name.",
+                "type": "string",
+                "enum": [
+                  "FilterCleanliness"
+                ]
+              },
+              "currentSensorState": {
+                "description": "Current state.",
+                "type": "string",
+                "enum": [
+                  "clean",
+                  "dirty",
+                  "needs replacement",
+                  "unknown"
+                ]
+              }
+            },
+            "required": [
+              "name",
+              "currentSensorState"
+            ]
+          },
+          {
+            "description": "Current water leak.",
+            "type": "object",
+            "properties": {
+              "name": {
+                "description": "Sensor state name.",
+                "type": "string",
+                "enum": [
+                  "WaterLeak"
+                ]
+              },
+              "currentSensorState": {
+                "description": "Current state.",
+                "type": "string",
+                "enum": [
+                  "leak",
+                  "no leak",
+                  "unknown"
+                ]
+              }
+            },
+            "required": [
+              "name",
+              "currentSensorState"
+            ]
+          },
+          {
+            "description": "Rain detection state.",
+            "type": "object",
+            "properties": {
+              "name": {
+                "description": "Sensor state name.",
+                "type": "string",
+                "enum": [
+                  "RainDetection"
+                ]
+              },
+              "currentSensorState": {
+                "description": "Current state.",
+                "type": "string",
+                "enum": [
+                  "rain detected",
+                  "no rain detected",
+                  "unknown"
+                ]
+              }
+            },
+            "required": [
+              "name",
+              "currentSensorState"
+            ]
+          },
+          {
+            "description": "Current filter lifetime.",
+            "type": "object",
+            "anyOf": [
+              {
+                "description": "Using sensor state name.",
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "description": "Sensor state name.",
+                    "type": "string",
+                    "enum": [
+                      "FilterLifeTime"
+                    ]
+                  },
+                  "currentSensorState": {
+                    "description": "Current state.",
+                    "type": "string",
+                    "enum": [
+                      "new",
+                      "good",
+                      "replace soon",
+                      "replace now",
+                      "unknown"
+                    ]
+                  }
+                },
+                "required": [
+                  "name",
+                  "currentSensorState"
+                ]
+              },
+              {
+                "description": "Using raw value.",
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "description": "Sensor state name.",
+                    "type": "string",
+                    "enum": [
+                      "FilterLifeTime"
+                    ]
+                  },
+                  "rawValue": {
+                    "description": "Current raw value.",
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 100
+                  }
+                },
+                "required": [
+                  "name",
+                  "rawValue"
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Current pre-, HEPA, or Max2 filter lifetime.",
+            "type": "object",
+            "properties": {
+              "name": {
+                "description": "Sensor state name.",
+                "type": "string",
+                "enum": [
+                  "PreFilterLifeTime",
+                  "HEPAFilterLifeTime",
+                  "Max2FilterLifeTime"
+                ]
+              },
+              "rawValue": {
+                "description": "Current raw value.",
+                "type": "number",
+                "minimum": 0,
+                "maximum": 100
+              }
+            },
+            "required": [
+              "name",
+              "rawValue"
+            ]
+          },
+          {
+            "description": "Current carbon dioxide level.",
+            "type": "object",
+            "properties": {
+              "name": {
+                "description": "Sensor state name.",
+                "type": "string",
+                "enum": [
+                  "CarbonDioxideLevel"
+                ]
+              },
+              "rawValue": {
+                "description": "Current raw value.",
+                "type": "number"
+              }
+            },
+            "required": [
+              "name",
+              "rawValue"
+            ]
+          },
+          {
+            "description": "Current particulate matter (PM2.5 or PM10) level.",
+            "type": "object",
+            "properties": {
+              "name": {
+                "description": "Sensor state name.",
+                "type": "string",
+                "enum": [
+                  "PM2.5",
+                  "PM10"
+                ]
+              },
+              "rawValue": {
+                "description": "Current raw value.",
+                "type": "number"
+              }
+            },
+            "required": [
+              "name",
+              "rawValue"
+            ]
+          },
+          {
+            "description": "Current volatile organic compounds (VOC) level.",
+            "type": "object",
+            "properties": {
+              "name": {
+                "description": "Sensor state name.",
+                "type": "string",
+                "enum": [
+                  "VolatileOrganicCompounds"
+                ]
+              },
+              "rawValue": {
+                "description": "Current raw value.",
+                "type": "number"
+              }
+            },
+            "required": [
+              "name",
+              "rawValue"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "required": [
+    "currentSensorStateData"
+  ]
+}
