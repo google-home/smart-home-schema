@@ -34,11 +34,6 @@
   ],
   "description": "This intent queries for the current states of devices. It is used for queries where truly real-time accuracy is required (for example, the status of a door lock). Only states are returned when action.devices.QUERY is triggered. To update the properties or traits or other persistent elements of the device, action.devices.SYNC is used.",
   "type": "object",
-  "required": [
-    "requestId",
-    "inputs"
-  ],
-  "additionalProperties": false,
   "properties": {
     "requestId": {
       "description": "ID of the request.",
@@ -51,22 +46,14 @@
       "items": {
         "description": "Type and payload associated with the intent request.",
         "type": "object",
-        "required": [
-          "intent",
-          "payload"
-        ],
-        "additionalProperties": false,
         "properties": {
           "intent": {
+            "description": "Intent request type.",
             "const": "action.devices.QUERY"
           },
           "payload": {
             "description": "QUERY request payload.",
             "type": "object",
-            "required": [
-              "devices"
-            ],
-            "additionalProperties": false,
             "properties": {
               "devices": {
                 "description": "List of target devices.",
@@ -74,10 +61,6 @@
                 "items": {
                   "description": "Device targets to query.",
                   "type": "object",
-                  "required": [
-                    "id"
-                  ],
-                  "additionalProperties": false,
                   "properties": {
                     "id": {
                       "description": "Device ID, as per the ID provided in SYNC.",
@@ -87,13 +70,31 @@
                       "description": "If the opaque customData object is provided in SYNC, it's sent here.",
                       "type": "object"
                     }
-                  }
+                  },
+                  "required": [
+                    "id"
+                  ],
+                  "additionalProperties": false
                 }
               }
-            }
+            },
+            "required": [
+              "devices"
+            ],
+            "additionalProperties": false
           }
-        }
+        },
+        "required": [
+          "intent",
+          "payload"
+        ],
+        "additionalProperties": false
       }
     }
-  }
+  },
+  "required": [
+    "requestId",
+    "inputs"
+  ],
+  "additionalProperties": false
 }

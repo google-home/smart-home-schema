@@ -70,8 +70,10 @@
   "type": "object",
   "properties": {
     "availableToggles": {
+      "description": "List of available toggles.",
       "type": "array",
       "items": {
+        "description": "Available toggle.",
         "type": "object",
         "properties": {
           "name": {

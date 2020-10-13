@@ -31,6 +31,7 @@
       "type": "object",
       "oneOf": [
         {
+          "description": "Color temperature support.",
           "type": "object",
           "properties": {
             "temperatureK": {
@@ -43,6 +44,7 @@
           ]
         },
         {
+          "description": "Color RGB spectrum support.",
           "type": "object",
           "properties": {
             "spectrumRgb": {
@@ -55,6 +57,7 @@
           ]
         },
         {
+          "description": "Color HSV spectrum support.",
           "type": "object",
           "properties": {
             "spectrumHsv": {

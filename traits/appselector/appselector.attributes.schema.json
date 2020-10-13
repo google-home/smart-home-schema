@@ -43,6 +43,7 @@
             "description": "Name of each application and its language-specific synonyms.",
             "type": "array",
             "items": {
+              "description": "Application synonyms.",
               "type": "object",
               "properties": {
                 "name_synonym": {

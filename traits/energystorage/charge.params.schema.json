@@ -14,6 +14,7 @@
   "type": "object",
   "properties": {
     "charge": {
+      "description": "True to start charging, false to stop charging.",
       "type": "boolean"
     }
   },

@@ -35,6 +35,7 @@
       "description": "Indicates zones in which the device is currently running, from list of <code>availableZones</code>.",
       "type": "array",
       "items": {
+        "description": "The zone name.",
         "type": "string"
       }
     }

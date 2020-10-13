@@ -8,34 +8,18 @@
     }
   ],
   "type": "object",
-  "anyOf": [
-    {
-      "description": "Speed setting state.",
-      "type": "object",
-      "properties": {
-        "currentFanSpeedSetting": {
-          "description": "This represents the internal name of the current speed setting from the <code>availableFanSpeeds</code> attribute.",
-          "type": "string"
-        }
-      },
-      "required": [
-        "currentFanSpeedSetting"
-      ]
+  "minProperties": 1,
+  "properties": {
+    "currentFanSpeedSetting": {
+      "description": "This represents the internal name of the current speed setting from the <code>availableFanSpeeds</code> attribute.",
+      "type": "string"
     },
-    {
-      "description": "Speed percentage state.",
-      "type": "object",
-      "properties": {
-        "currentFanSpeedPercent": {
-          "description": "Indicates the current fan speed by percentage. Required if <code>supportsFanSpeedPercent</code> attribute is set to <code>true</code>",
-          "type": "number",
-          "minimum": 0,
-          "maximum": 100
-        }
-      },
-      "required": [
-        "currentFanSpeedPercent"
-      ]
+    "currentFanSpeedPercent": {
+      "description": "Indicates the current fan speed by percentage. Required if <code>supportsFanSpeedPercent</code> attribute is set to <code>true</code>",
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100
     }
-  ]
+  },
+  "additionalProperties": false
 }

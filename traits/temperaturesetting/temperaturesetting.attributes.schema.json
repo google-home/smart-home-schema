@@ -27,10 +27,10 @@
   "type": "object",
   "properties": {
     "availableThermostatModes": {
-      "description": "Supported modes.",
+      "description": "Describes the thermostat modes this device can support.",
       "oneOf": [
         {
-          "description": "Comma-separated list of modes supported by this specific device.",
+          "description": "Comma-separated list of modes supported by this specific device. New integrations should use the <code>Array</code> form of this attribute.",
           "type": "string",
           "pattern": "^((off|heat|cool|on|heatcool|auto|fan-only|purifier|eco|dry|),?)+$",
           "deprecated": true
@@ -39,7 +39,7 @@
           "description": "List of modes supported by this specific device.",
           "type": "array",
           "items": {
-            "description": "Supported mode.",
+            "description": "Name of the supported mode.",
             "type": "string",
             "oneOf": [
               {

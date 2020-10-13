@@ -28,11 +28,6 @@
   ],
   "description": "This intent queries for the current states of devices. It is used for queries where truly real-time accuracy is required (for example, the status of a door lock). Only states are returned when action.devices.QUERY is triggered. To update the properties or traits or other persistent elements of the device, action.devices.SYNC is used.",
   "type": "object",
-  "required": [
-    "requestId",
-    "payload"
-  ],
-  "additionalProperties": false,
   "properties": {
     "requestId": {
       "description": "ID of the corresponding request.",
@@ -42,10 +37,6 @@
     "payload": {
       "description": "Intent response payload.",
       "type": "object",
-      "required": [
-        "devices"
-      ],
-      "additionalProperties": false,
       "properties": {
         "errorCode": {
           "description": "An error code for the entire transaction for auth failures and developer system unavailability. For individual device errors use the errorCode within the device object.",
@@ -59,6 +50,7 @@
           "description": "Map of devices. Maps developer device ID to object of state properties.",
           "type": "object",
           "additionalProperties": {
+            "description": "Device state.",
             "type": "object",
             "properties": {
               "online": {
@@ -70,28 +62,28 @@
                 "type": "string",
                 "oneOf": [
                   {
+                    "description": "Confirm that the query succeeded.",
                     "enum": [
                       "SUCCESS"
-                    ],
-                    "description": "Confirm that the query succeeded."
+                    ]
                   },
                   {
+                    "description": "Target device is in offline state or unreachable.",
                     "enum": [
                       "OFFLINE"
-                    ],
-                    "description": "Target device is in offline state or unreachable."
+                    ]
                   },
                   {
+                    "description": "There is an issue or alert associated with a query. The query could succeed or fail. This status type is typically set when you want to send additional information about another connected device.",
                     "enum": [
                       "EXCEPTIONS"
-                    ],
-                    "description": "There is an issue or alert associated with a query. The query could succeed or fail. This status type is typically set when you want to send additional information about another connected device."
+                    ]
                   },
                   {
+                    "description": "Unable to query the target device.",
                     "enum": [
                       "ERROR"
-                    ],
-                    "description": "Unable to query the target device."
+                    ]
                   }
                 ]
               },
@@ -106,7 +98,16 @@
             ]
           }
         }
-      }
+      },
+      "required": [
+        "devices"
+      ],
+      "additionalProperties": false
     }
-  }
+  },
+  "required": [
+    "requestId",
+    "payload"
+  ],
+  "additionalProperties": false
 }

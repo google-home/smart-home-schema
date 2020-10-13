@@ -93,16 +93,20 @@
   "anyOf": [
     {
       "type": "object",
+      "description": "At least one rotation mode should be supported (degrees).",
       "properties": {
         "supportsDegrees": {
+          "description": "Degree rotation is supported.",
           "const": true
         }
       }
     },
     {
       "type": "object",
+      "description": "At least one rotation mode should be supported (percent).",
       "properties": {
         "supportsPercent": {
+          "description": "Percent rotation is supported.",
           "const": true
         }
       }

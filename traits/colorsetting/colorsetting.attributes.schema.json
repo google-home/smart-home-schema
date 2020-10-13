@@ -36,6 +36,7 @@
   },
   "anyOf": [
     {
+      "description": "Color model support.",
       "type": "object",
       "properties": {
         "colorModel": {
@@ -52,6 +53,7 @@
       ]
     },
     {
+      "description": "Color temperature support.",
       "type": "object",
       "properties": {
         "colorTemperatureRange": {

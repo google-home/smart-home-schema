@@ -18,6 +18,7 @@
       "description": "A list of strings describing supported transport control commands on this device.",
       "type": "array",
       "items": {
+        "description": "Supported commands.",
         "type": "string",
         "enum": [
           "CAPTION_CONTROL",

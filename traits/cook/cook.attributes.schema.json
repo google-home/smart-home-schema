@@ -52,6 +52,7 @@
       "description": "Cooking modes supported by this device.",
       "type": "array",
       "items": {
+        "description": "Cooking mode.",
         "type": "string",
         "enum": [
           "UNKNOWN_COOKING_MODE",
@@ -100,6 +101,7 @@
             "description": "Contains all of the units supported by the device for a specific food.",
             "type": "array",
             "items": {
+              "description": "Supported unit.",
               "type": "string",
               "enum": [
                 "UNKNOWN_UNITS",
@@ -133,12 +135,14 @@
             "description": "Food name synonyms for the preset in each supported language.",
             "type": "array",
             "items": {
+              "description": "Food name.",
               "type": "object",
               "properties": {
                 "synonym": {
                   "description": "Synonyms for the preset, should include both singular and plural forms, if applicable.",
                   "type": "array",
                   "items": {
+                    "description": "Preset synonym name.",
                     "type": "string"
                   }
                 },

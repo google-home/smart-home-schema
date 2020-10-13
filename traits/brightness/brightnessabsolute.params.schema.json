@@ -6,6 +6,7 @@
       "brightness": 65
     }
   ],
+  "description": "Adjust device absolute brightness.",
   "type": "object",
   "properties": {
     "brightness": {

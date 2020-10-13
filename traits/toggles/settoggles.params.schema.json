@@ -14,6 +14,7 @@
       }
     }
   ],
+  "description": "Set a given toggle state.",
   "type": "object",
   "properties": {
     "updateToggleSettings": {

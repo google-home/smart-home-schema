@@ -14,10 +14,12 @@
       "rotationDegrees": 10
     }
   ],
+  "description": "Set the absolute rotation of the device.",
   "type": "object",
   "oneOf": [
     {
       "type": "object",
+      "description": "Set the absolute rotation in degrees.",
       "properties": {
         "rotationDegrees": {
           "description": "An absolute value, in degrees, that specifies the final clockwise rotation of the device. Value must fall within <code>rotationDegreesRange</code> attribute.",
@@ -30,6 +32,7 @@
     },
     {
       "type": "object",
+      "description": "Set the absolute rotation in percentage.",
       "properties": {
         "rotationPercent": {
           "description": "An absolute value, in percentage, that specifies the final rotation of the device.",

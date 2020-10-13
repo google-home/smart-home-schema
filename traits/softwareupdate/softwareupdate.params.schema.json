@@ -5,6 +5,7 @@
       "$comment": "Update my device."
     }
   ],
+  "description": "Update the device.",
   "type": "object",
   "additionalProperties": false
 }

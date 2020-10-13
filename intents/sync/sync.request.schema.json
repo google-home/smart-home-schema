@@ -14,11 +14,6 @@
   ],
   "description": "This intent is triggered at user setup or when a user reconnects through the Action (to reconnect or disconnect) when necessary to resync devices in batch (for example, when new traits are added).",
   "type": "object",
-  "required": [
-    "requestId",
-    "inputs"
-  ],
-  "additionalProperties": false,
   "properties": {
     "requestId": {
       "description": "ID of the request.",
@@ -31,16 +26,22 @@
       "items": {
         "description": "Type and payload associated with the intent request.",
         "type": "object",
+        "properties": {
+          "intent": {
+            "description": "Intent request type.",
+            "const": "action.devices.SYNC"
+          }
+        },
         "required": [
           "intent"
         ],
-        "additionalProperties": false,
-        "properties": {
-          "intent": {
-            "const": "action.devices.SYNC"
-          }
-        }
+        "additionalProperties": false
       }
     }
-  }
+  },
+  "required": [
+    "requestId",
+    "inputs"
+  ],
+  "additionalProperties": false
 }

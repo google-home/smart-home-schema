@@ -20,6 +20,7 @@
       "unit": "CUPS"
     }
   ],
+  "description": "Start or stop cooking.",
   "type": "object",
   "properties": {
     "start": {

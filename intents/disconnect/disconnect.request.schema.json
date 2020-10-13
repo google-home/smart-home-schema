@@ -14,11 +14,6 @@
   ],
   "description": "This intent is triggered to inform you when a user has unlinked the app account from the Google Assistant. After receiving a DISCONNECT intent, you should not report state for this user's devices.",
   "type": "object",
-  "required": [
-    "requestId",
-    "inputs"
-  ],
-  "additionalProperties": false,
   "properties": {
     "requestId": {
       "description": "ID of the request.",
@@ -31,16 +26,22 @@
       "items": {
         "description": "Type and payload associated with the intent request.",
         "type": "object",
+        "properties": {
+          "intent": {
+            "description": "Intent request type.",
+            "const": "action.devices.DISCONNECT"
+          }
+        },
         "required": [
           "intent"
         ],
-        "additionalProperties": false,
-        "properties": {
-          "intent": {
-            "const": "action.devices.DISCONNECT"
-          }
-        }
+        "additionalProperties": false
       }
     }
-  }
+  },
+  "required": [
+    "requestId",
+    "inputs"
+  ],
+  "additionalProperties": false
 }

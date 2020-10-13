@@ -34,9 +34,10 @@
   "type": "object",
   "properties": {
     "currentStatusReport": {
-      "description": "Current error or exception status of the device and any related device IDs.",
+      "description": "Current error or exception statuses of the device and any related device IDs.",
       "type": "array",
       "items": {
+        "description": "Current status.",
         "type": "object",
         "properties": {
           "blocking": {

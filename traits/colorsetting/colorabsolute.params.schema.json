@@ -27,9 +27,11 @@
       }
     }
   ],
+  "description": "Set the absolute color value.",
   "type": "object",
   "properties": {
     "color": {
+      "description": "Color to set.",
       "type": "object",
       "properties": {
         "name": {
@@ -39,6 +41,7 @@
       },
       "oneOf": [
         {
+          "description": "Color temperature support.",
           "type": "object",
           "properties": {
             "temperature": {
@@ -51,6 +54,7 @@
           ]
         },
         {
+          "description": "Color RGB spectrum support.",
           "type": "object",
           "properties": {
             "spectrumRGB": {
@@ -63,6 +67,7 @@
           ]
         },
         {
+          "description": "Color HSV spectrum support.",
           "type": "object",
           "properties": {
             "spectrumHSV": {

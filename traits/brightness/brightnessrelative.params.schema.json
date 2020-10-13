@@ -10,8 +10,10 @@
       "brightnessRelativeWeight": -1
     }
   ],
+  "description": "Adjust device relative brightness.",
   "oneof": [
     {
+      "description": "Percentage relative adjustment.",
       "type": "object",
       "properties": {
         "brightnessRelativePercent": {
@@ -26,6 +28,7 @@
       ]
     },
     {
+      "description": "Weight relative adjustment.",
       "type": "object",
       "properties": {
         "brightnessRelativeWeight": {
