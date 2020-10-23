@@ -35,5 +35,6 @@
   },
   "required": [
     "openPercent"
-  ]
+  ],
+  "additionalProperties": false
 }

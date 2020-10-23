@@ -15,5 +15,6 @@
       "minimum": 300,
       "maximum": 3600
     }
-  }
+  },
+  "additionalProperties": false
 }

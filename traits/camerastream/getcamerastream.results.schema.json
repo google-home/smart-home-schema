@@ -26,7 +26,7 @@
       "type": "string"
     },
     "cameraStreamAuthToken": {
-      "description": "An auth token for the specific receiver to authorize access to the stream.",
+      "description": "An auth token for the specific receiver to authorize access to the stream. If <code>cameraStreamNeedAuthToken</code> is true and this value is not provided, the user's OAuth credentials will be used as the auth token.",
       "type": "string"
     },
     "cameraStreamProtocol": {

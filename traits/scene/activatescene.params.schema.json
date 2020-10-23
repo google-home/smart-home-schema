@@ -20,5 +20,6 @@
   },
   "required": [
     "deactivate"
-  ]
+  ],
+  "additionalProperties": false
 }

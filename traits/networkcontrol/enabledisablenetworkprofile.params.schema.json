@@ -22,5 +22,6 @@
   "required": [
     "profile",
     "enable"
-  ]
+  ],
+  "additionalProperties": false
 }

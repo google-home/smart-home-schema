@@ -23,7 +23,7 @@
   "type": "object",
   "properties": {
     "StreamToChromecast": {
-      "description": "Whether the stream will be played on a Chromecast device.",
+      "description": "Whether the stream will be played on a Chromecast device. Currently, this is always true.",
       "type": "boolean"
     },
     "SupportedStreamProtocols": {
@@ -44,5 +44,6 @@
   "required": [
     "StreamToChromecast",
     "SupportedStreamProtocols"
-  ]
+  ],
+  "additionalProperties": false
 }

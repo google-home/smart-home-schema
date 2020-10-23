@@ -23,7 +23,8 @@
       },
       "required": [
         "thermostatTemperatureRelativeDegree"
-      ]
+      ],
+      "additionalProperties": false
     },
     {
       "type": "object",
@@ -38,7 +39,8 @@
       },
       "required": [
         "thermostatTemperatureRelativeWeight"
-      ]
+      ],
+      "additionalProperties": false
     }
   ]
 }

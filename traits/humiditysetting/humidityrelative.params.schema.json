@@ -26,7 +26,8 @@
       },
       "required": [
         "humidityRelativePercent"
-      ]
+      ],
+      "additionalProperties": false
     },
     {
       "description": "Set humidity weight.",
@@ -41,7 +42,8 @@
       },
       "required": [
         "humidityRelativeWeight"
-      ]
+      ],
+      "additionalProperties": false
     }
   ]
 }

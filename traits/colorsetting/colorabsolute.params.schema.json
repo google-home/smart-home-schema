@@ -104,5 +104,6 @@
   },
   "required": [
     "color"
-  ]
+  ],
+  "additionalProperties": false
 }

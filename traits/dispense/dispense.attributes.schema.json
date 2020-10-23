@@ -228,6 +228,5 @@
         ]
       }
     }
-  },
-  "additionalProperties": false
+  }
 }

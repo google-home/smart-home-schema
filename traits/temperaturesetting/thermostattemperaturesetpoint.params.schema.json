@@ -16,5 +16,6 @@
   },
   "required": [
     "thermostatTemperatureSetpoint"
-  ]
+  ],
+  "additionalProperties": false
 }

@@ -20,5 +20,6 @@
   },
   "required": [
     "charge"
-  ]
+  ],
+  "additionalProperties": false
 }

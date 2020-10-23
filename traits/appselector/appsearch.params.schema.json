@@ -33,5 +33,6 @@
     "required": [
       "newApplicationName"
     ]
-  }
+  },
+  "additionalProperties": false
 }

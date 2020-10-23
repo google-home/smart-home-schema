@@ -48,13 +48,13 @@
         "rotationDegreesMin": {
           "description": "Minimum rotation in degrees.",
           "type": "number",
-          "mininum": 0,
+          "minimum": 0,
           "maximum": 360
         },
         "rotationDegreesMax": {
           "description": "Maximum rotation in degrees.",
           "type": "number",
-          "mininum": 0,
+          "minimum": 0,
           "maximum": 360
         }
       },

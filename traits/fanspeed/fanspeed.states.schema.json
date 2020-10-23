@@ -20,6 +20,5 @@
       "minimum": 0,
       "maximum": 100
     }
-  },
-  "additionalProperties": false
+  }
 }

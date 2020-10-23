@@ -23,7 +23,8 @@
       },
       "required": [
         "fanSpeed"
-      ]
+      ],
+      "additionalProperties": false
     },
     {
       "description": "Set speed by percentage.",
@@ -38,7 +39,8 @@
       },
       "required": [
         "fanSpeedPercent"
-      ]
+      ],
+      "additionalProperties": false
     }
   ]
 }

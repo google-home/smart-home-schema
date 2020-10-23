@@ -26,5 +26,6 @@
       "description": "Language or locale for user query.",
       "type": "string"
     }
-  }
+  },
+  "additionalProperties": false
 }

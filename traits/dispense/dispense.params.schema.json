@@ -37,7 +37,8 @@
       "required": [
         "amount",
         "unit"
-      ]
+      ],
+      "additionalProperties": false
     },
     {
       "description": "Dispense by preset.",
@@ -50,7 +51,8 @@
       },
       "required": [
         "presetName"
-      ]
+      ],
+      "additionalProperties": false
     },
     {
       "description": "Dispense without parameters.",

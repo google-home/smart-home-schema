@@ -32,7 +32,8 @@
       },
       "required": [
         "channelCode"
-      ]
+      ],
+      "additionalProperties": false
     },
     {
       "description": "Select channel by number",
@@ -45,7 +46,8 @@
       },
       "required": [
         "channelNumber"
-      ]
+      ],
+      "additionalProperties": false
     }
   ]
 }

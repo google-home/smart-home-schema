@@ -22,5 +22,6 @@
   "required": [
     "thermostatTemperatureSetpointHigh",
     "thermostatTemperatureSetpointLow"
-  ]
+  ],
+  "additionalProperties": false
 }

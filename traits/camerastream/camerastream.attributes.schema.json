@@ -36,7 +36,7 @@
       }
     },
     "cameraStreamNeedAuthToken": {
-      "description": "Whether an auth token will be needed to stream the camera feed.",
+      "description": "Whether an auth token will be provided via <code>cameraStreamAuthToken</code> for your custom Cast receiver to stream the camera feed.",
       "type": "boolean"
     },
     "cameraStreamNeedDrmEncryption": {

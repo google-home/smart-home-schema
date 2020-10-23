@@ -23,5 +23,6 @@
       "type": "string",
       "default": "en"
     }
-  }
+  },
+  "additionalProperties": false
 }

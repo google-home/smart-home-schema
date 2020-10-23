@@ -25,7 +25,8 @@
       },
       "required": [
         "fanSpeedRelativeWeight"
-      ]
+      ],
+      "additionalProperties": false
     },
     {
       "description": "Set relative speed by percentage.",
@@ -40,7 +41,8 @@
       },
       "required": [
         "fanSpeedRelativePercent"
-      ]
+      ],
+      "additionalProperties": false
     }
   ]
 }

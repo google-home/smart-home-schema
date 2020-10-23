@@ -26,5 +26,6 @@
   },
   "required": [
     "lock"
-  ]
+  ],
+  "additionalProperties": false
 }

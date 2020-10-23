@@ -16,5 +16,6 @@
   },
   "required": [
     "humidity"
-  ]
+  ],
+  "additionalProperties": false
 }

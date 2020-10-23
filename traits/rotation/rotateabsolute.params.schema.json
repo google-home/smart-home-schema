@@ -28,7 +28,8 @@
       },
       "required": [
         "rotationDegrees"
-      ]
+      ],
+      "additionalProperties": false
     },
     {
       "type": "object",
@@ -43,7 +44,8 @@
       },
       "required": [
         "rotationPercent"
-      ]
+      ],
+      "additionalProperties": false
     }
   ]
 }
