@@ -111,6 +111,10 @@
                             "description": "Aligned with the parameters for each command.",
                             "type": "object",
                             "additionalProperties": true
+                          },
+                          "challenge": {
+                            "description": "Challenge for devices that implement the secondary verification flow.",
+                            "type": "object"
                           }
                         },
                         "required": [
