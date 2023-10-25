@@ -113,6 +113,10 @@
               "errorCode": {
                 "description": "Expanding ERROR state if needed from the preset error codes, which will map to the errors presented to users.",
                 "type": "string"
+              },
+              "challengeNeeded": {
+                "description": "A response that requires a Secondary user verification challenge.",
+                "type": "object"
               }
             },
             "required": [
